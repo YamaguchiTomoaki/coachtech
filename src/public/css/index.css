@@ -1,0 +1,51 @@
+.index__header {
+    height: 50px;
+    border-bottom: 2px solid #878787;
+    display: flex;
+    align-items: end;
+}
+
+.index__header input {
+    display: none;
+    margin-left: 50px;
+}
+
+.index__header label {
+    font-weight: bold;
+    color: #878787;
+    margin-left: 100px;
+}
+
+.index__header label:first-of-type {
+    margin-left: 150px;
+}
+
+input[type="radio"]:checked+label {
+    color: #f00;
+}
+
+.index__content {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.recommendation__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item__card {
+    width: 240px;
+    height: 260px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 100px 80px 0 0;
+}
+
+.item__card img {
+    width: 100%;
+    height: 100%;
+}
+
+.item__name {
+    text-align: center;
+}
