@@ -36,4 +36,14 @@ class ItemController extends Controller
         dd($categoryCount);*/
         return view('index', compact('itemsArray', 'itemsCount', 'mylistsArray', 'mylistsCount'));
     }
+
+    public function detail(Item $item_id)
+    {
+        $itemArray = $item_id->toArray();
+        $item = Item::with('user', 'condition', 'category')->where([
+            ['id', '=', $itemArray['id']],
+        ])->get();
+        dd($itemArray);
+        return view('detail', compact('itemArray'));
+    }
 }

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\OriginalLoginController;
+use App\Http\Controllers\OriginalRegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/register', [OriginalRegisterController::class, 'store']);
+Route::post('/login', [OriginalLoginController::class, 'store']);
+
 Route::get('/', [ItemController::class, 'index']);
+Route::get('/item/{item_id}', [ItemController::class, 'detail'])->name('item.detail');
+
+Route::middleware('auth')->group(function () {
+    Route::delete('/logout', [OriginalLoginController::class, 'destroy'])->name('login.destroy');
+});

@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'name' => '出品者太郎',
             'email' => 'seller@gmail.com',
-            'password' => Hash::make('seller1'),
+            'password' => Hash::make('seller_test1'),
             'created_at' => '2024-01-01 11:11:11',
             'updated_at' => '2024-01-01 11:11:11',
         ];
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'name' => '出品者次郎',
             'email' => 'seller2@gmail.com',
-            'password' => Hash::make('seller2'),
+            'password' => Hash::make('seller_test2'),
             'created_at' => '2024-01-01 11:11:11',
             'updated_at' => '2024-01-01 11:11:11',
         ];
