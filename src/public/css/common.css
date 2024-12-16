@@ -14,8 +14,12 @@ body {
     margin-left: 30px;
 }
 
-.header__search {
+.search-form {
     width: 20%;
+}
+
+.header__search {
+    width: 100%;
 }
 
 .header__search input {

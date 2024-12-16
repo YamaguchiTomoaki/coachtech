@@ -38,4 +38,11 @@ class Item extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function scopeItemSearch($query, $name)
+    {
+        if ($name != 'null') {
+            $query->where('name', 'like', '%' . $name . '%');
+        }
+    }
 }

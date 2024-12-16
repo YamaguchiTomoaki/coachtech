@@ -20,6 +20,7 @@ Route::post('/register', [OriginalRegisterController::class, 'store']);
 Route::post('/login', [OriginalLoginController::class, 'store']);
 
 Route::get('/', [ItemController::class, 'index']);
+Route::get('/search', [ItemController::class, 'search']);
 Route::get('/item/{item_id}', [ItemController::class, 'detail'])->name('item.detail');
 
 Route::middleware('auth')->group(function () {

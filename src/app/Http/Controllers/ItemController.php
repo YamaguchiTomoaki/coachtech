@@ -37,13 +37,34 @@ class ItemController extends Controller
         return view('index', compact('itemsArray', 'itemsCount', 'mylistsArray', 'mylistsCount'));
     }
 
+    public function search(Request $request)
+    {
+        $items = Item::with('user', 'condition', 'category')->ItemSearch($request->name)->get();
+        $itemsCount = count($items);
+        $itemsArray = $items->toArray();
+
+        $user = Auth::user();
+        if ($user != null) {
+            $mylists = Favorite::where([
+                ['user_id', '=', $user['id']],
+            ])->orderBy('id')->get();
+            $mylistsCount = count($mylists);
+            $mylistsArray = $mylists;
+        } else {
+            $mylistsArray = null;
+            $mylistsCount = null;
+        }
+
+        return view('index', compact('itemsArray', 'itemsCount', 'mylistsArray', 'mylistsCount'));
+    }
+
     public function detail(Item $item_id)
     {
-        $itemArray = $item_id->toArray();
         $item = Item::with('user', 'condition', 'category')->where([
-            ['id', '=', $itemArray['id']],
+            ['id', '=', $item_id->id],
         ])->get();
-        dd($itemArray);
-        return view('detail', compact('itemArray'));
+        $categoryCount = count($item[0]['category']);
+        // $item[0]['category'][0]['category']
+        return view('detail', compact('itemArray', 'categoryCount'));
     }
 }

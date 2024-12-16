@@ -17,9 +17,11 @@
             <div class="header__logo">
                 <img src="{{ asset('storage/logo.jpg') }}" alt="logo">
             </div>
-            <div class="header__search">
-                <input type="text" name="name" placeholder="なにをお探しですか？" value="{{ request('name') }}">
-            </div>
+            <form class="search-form" action="/search" method="get">
+                <div class="header__search">
+                    <input type="text" name="name" placeholder="なにをお探しですか？" value="{{ request('name') }}">
+                </div>
+            </form>
             <div class="header__auth">
                 @if (Auth::check())
                 <a class="header__logout" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
