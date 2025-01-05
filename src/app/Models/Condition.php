@@ -9,8 +9,12 @@ class Condition extends Model
 {
     use HasFactory;
 
+    protected $guarded = [
+        'id',
+    ];
+
     public function item()
     {
-        $this->hasMany(Item::class);
+        return $this->hasMany(Item::class);
     }
 }

@@ -9,6 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $guarded = [
+        'id',
+    ];
+
     public function item()
     {
         return $this->belongsToMany(Item::class, 'item_category', 'category_id', 'item_id');

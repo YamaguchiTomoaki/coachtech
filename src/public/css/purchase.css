@@ -1,0 +1,123 @@
+.purchase__content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.left__content {
+    width: 70%;
+}
+
+.item__content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 80px 10px 30px 10px;
+}
+
+.item__image {
+    width: 180px;
+    height: 180px;
+}
+
+.item__text {
+    margin-left: 50px;
+}
+
+.ttl__text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.pay__content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.pay__ttl {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.address__content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address__ttl {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.address__text {
+    margin: 0;
+}
+
+.address__link {
+    text-decoration: none;
+    color: blue;
+}
+
+.right__content {
+    width: 30%;
+}
+
+.confirm__content {
+    border: 1px solid #000;
+    margin: 80px auto 50px;
+}
+
+.confirm__price {
+    display: flex;
+    margin: 50px auto 0;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm__buy {
+    display: flex;
+    margin: 50px auto 0;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm__pay {
+    display: flex;
+    margin: 30px auto;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+button.stripe-button-el {
+    border: 1px solid #ff5555;
+    width: 100%;
+}
+
+button.stripe-button-el>span {
+    background-color: #ff5555 !important;
+    background-image: none;
+    width: 100%;
+}
+
+.check__button {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}

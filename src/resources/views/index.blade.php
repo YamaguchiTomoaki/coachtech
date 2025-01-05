@@ -19,6 +19,10 @@
             <form class="detail-form" action="/item/{{ $itemsArray[$id]['id'] }}" method="get">
                 <input type="image" class="item__image" name="item" src="{{ asset('storage/' . $itemsArray[$id]['image']) }}">
                 <p class="item__name">{{ $itemsArray[$id]['name'] }}</p>
+                @if ($itemsArray[$id]['buy'] == 1)
+                <p class="sold__text">SOLD OUT</p>
+                @endif
+
             </form>
     </div>
     @endfor
@@ -26,9 +30,12 @@
 <div class="mylist__content" id="mylist__content">
     @for ($id=0;$id<$mylistsCount;$id++)
         <div class="item__card">
-        <form class="detail-form" action="/item/{{ $mylistsArray[$id]['id'] }}" method="get">
-            <input type="image" class="item__image" name="item" src="{{ asset('storage/' . mylistsArray[$id]['image']) }}">
-            <p class="item__name">{{ mylistsArray[$id]['name'] }}</p>
+        <form class="detail-form" action="/item/{{ $mylistsArray[$id]['item_id'] }}" method="get">
+            <input type="image" class="item__image" name="item" src="{{ asset('storage/' . $mylistsArray[$id]['item']['image']) }}">
+            <p class="item__name">{{ $mylistsArray[$id]['item']['name'] }}</p>
+            @if ($mylistsArray[$id]['buy'] == 1)
+            <p class="sold__text">SOLD OUT</p>
+            @endif
         </form>
 </div>
 @endfor

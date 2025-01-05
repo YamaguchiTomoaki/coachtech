@@ -1,0 +1,153 @@
+.profile__content {
+    width: 40%;
+    margin: auto;
+}
+
+.profile__ttl {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.profile-form {
+    width: 100%;
+}
+
+.profile__image {
+    display: flex;
+    align-items: center;
+}
+
+.user__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.default__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.file__label {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.image__file {
+    width: 100%;
+}
+
+.image__file::file-selector-button {
+    display: block;
+    opacity: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.file__label::before {
+    font-size: 18px;
+    padding: 5px 10px;
+    content: "画像を選択する";
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #ff5555;
+    color: #ff5555;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.profile__name {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input__ttl {
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile__name input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.profile__postcode {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.profile__postcode input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.profile__address {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.profile__address input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.profile__building {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.profile__building input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.profile__button {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.profile__button button {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5555;
+    color: #fff;
+    border: 1px solid #ff5555;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-form__error-message {
+    color: #f00;
+    margin: 0;
+    font-size: 18px;
+}
