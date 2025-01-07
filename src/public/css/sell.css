@@ -1,0 +1,232 @@
+.sell__content {
+    width: 40%;
+    margin: auto;
+}
+
+.sell__ttl {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.sell-form {
+    width: 100%;
+}
+
+.sell__image {
+    width: 100%;
+}
+
+.image__ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.image__image {
+    margin-top: 10px;
+}
+
+.file__label {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.image__file {
+    width: 100%;
+}
+
+.image__file::file-selector-button {
+    display: block;
+    opacity: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.file__label::before {
+    font-size: 18px;
+    padding: 5px 10px;
+    content: "画像を選択する";
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #ff5555;
+    color: #ff5555;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.sell__detail {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.detail__ttl {
+    width: 100%;
+    border-bottom: 2px solid #878787;
+}
+
+.detail__ttl--text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail__category {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.detail__category--ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.input__category {}
+
+.checkbox__label {
+    margin-right: 20px;
+}
+
+.detail__condition {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.detail__condition--ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail__condition select {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.sell__description {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.description__ttl {
+    width: 100%;
+    border-bottom: 2px solid #878787;
+}
+
+.description__ttl--text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.description__name {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.description__name--ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.description__name input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.description__description {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.description__description--ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.description__description textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    margin-top: 10px;
+}
+
+.sell__price {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.price__ttl {
+    width: 100%;
+    border-bottom: 2px solid #878787;
+}
+
+.price__ttl--text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price__price {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.price__price--ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price__price input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.sell__button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sell-form__button {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5555;
+    color: #fff;
+    border: 1px solid #ff5555;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sell-form__error-message {
+    color: #f00;
+    margin: 0;
+    font-size: 18px;
+}

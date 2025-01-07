@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SellRequest;
 use App\Models\Category;
 use App\Models\Comment;
 use Illuminate\Http\Request;
@@ -9,6 +10,8 @@ use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Favorite;
 use App\Models\Buy;
+use App\Models\Condition;
+use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
@@ -181,5 +184,36 @@ class ItemController extends Controller
 
 
         return view('detail', compact('item', 'categoryCount', 'favorite_status', 'favoriteCount', 'comment_status', 'commentCount', 'buy_status'));
+    }
+
+    public function sell()
+    {
+        $categories = Category::all();
+        $conditions = Condition::all();
+        return view('sell', compact('categories', 'conditions'));
+    }
+
+    public function create(SellRequest $request)
+    {
+        $user = Auth::user();
+        $categoryCount = count($request->category);
+        $file_name = $request->file('image')->getClientOriginalName();
+        if (! Storage::exists('public/' . $file_name)) {
+            $request->file('image')->storeAs('public', $file_name);
+        }
+
+        $item = [
+            'user_id' => $user['id'],
+            'condition_id' => $request->condition,
+            'name' => $request->name,
+            'description' => $request->description,
+            'price' => $request->price,
+            'image' => $file_name,
+        ];
+        $create_item = Item::create($item);
+        for ($id = 0; $id < $categoryCount; $id++) {
+            $create_item->category()->attach($request->category[$id]);
+        }
+        return redirect('/');
     }
 }
