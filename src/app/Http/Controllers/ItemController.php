@@ -150,22 +150,6 @@ class ItemController extends Controller
         ])->get();
         $favoriteCount = count($favorites);
 
-        if ($user != null) {
-            $comment = Comment::where([
-                ['user_id', '=', $user['id']],
-                ['item_id', '=', $item_id->id],
-            ])->get();
-
-            if ($comment != "[]") {
-                $comment_status = 1;
-            } else {
-                $comment_status = 0;
-                $comment = null;
-            }
-        } else {
-            $comment_status = 0;
-            $comment = null;
-        }
         $comments = Comment::where([
             ['item_id', '=', $item_id->id],
         ])->get();
@@ -183,7 +167,7 @@ class ItemController extends Controller
         }
 
 
-        return view('detail', compact('item', 'categoryCount', 'favorite_status', 'favoriteCount', 'comment_status', 'commentCount', 'buy_status'));
+        return view('detail', compact('item', 'categoryCount', 'favorite_status', 'favoriteCount', 'commentCount', 'buy_status'));
     }
 
     public function sell()

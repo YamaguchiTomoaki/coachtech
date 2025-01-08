@@ -34,14 +34,11 @@
                     </button>
                 </form>
                 @endif
-                @if ($comment_status == 0)
                 <form class="comment-form" action="/comment" method="get">
+                    <input type="hidden" name="item_id" value="{{ $item[0]['id'] }}">
                     <button class="comment__btn" type="submit">
                     </button>
                 </form>
-                @else
-                <button class="comment__btn"></button>
-                @endif
             </div>
             <div class="item__count">
                 <p class="favorite__count">{{ $favoriteCount }}</p>
@@ -53,7 +50,7 @@
             @if ($buy_status == 1)
             <button class="soldout__btn">出品者本人です</button>
             @elseif ($buy_status == 2)
-            <button class="soldout__btn">購入済み</button>
+            <button class="soldout__btn" disabled>購入済み</button>
             @else
             <form class="buy-form" action="/purchase/{{ $item[0]['id'] }}" method="get">
                 <button class="buy__btn" type="submit">購入する</button>

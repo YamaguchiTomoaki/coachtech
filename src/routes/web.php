@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MypageController;
@@ -31,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/logout', [OriginalLoginController::class, 'destroy'])->name('login.destroy');
     Route::post('/favorite', [FavoriteController::class, 'create']);
     Route::post('/remove', [FavoriteController::class, 'delete']);
+    Route::get('/comment', [CommentController::class, 'comment'])->name('comment.comment');
+    Route::post('/comment', [CommentController::class, 'create']);
     Route::get('/purchase/{item_id}', [PurchaseController::class, 'purchase'])->name('purchase.purchase');
     Route::post('payment/store', [PaymentController::class, 'store'])->name('payment.store');
     Route::get('/mypage', [MypageController::class, 'mypage'])->name('mypage.mypage');
