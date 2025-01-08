@@ -5,7 +5,6 @@ window.onload = function () {
 
 window.formSwitch = function () {
     hoge = document.getElementsByName('item')
-    console.log(hoge);
     if (hoge[0].checked) {
         document.getElementById('sell__content').style.display = "";
         document.getElementById('buy__content').style.display = "none";
